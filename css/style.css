@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #e0e0e0;
+    background: #121212;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* LOGO IMAGEM */
+.logo-img {
+    width: 240px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: none;
+    drop-shadow: 0 0 8px rgba(100, 100, 255, 0.3);
+    transition: transform 0.3s ease, drop-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    drop-shadow: 0 0 12px rgba(100, 100, 255, 0.5);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    color: #ffffff;
+    padding: 5rem 1rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #b0b0b0;
+}
+
+.header-buttons {
+    margin-top: 1.5rem;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #2d2d2d;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    margin: 0.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #3d3d3d;
+    transform: translateY(-2px);
+    border-color: #4a4a4a;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #555;
+}
+
+.btn.small {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+}
+
+/* SECTIONS */
+.section {
+    padding: 3rem 0;
+    background: #121212;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #3a3a3a;
+    margin: 10px auto 0;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.skill-card {
+    background: #1e1e1e;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.skill-card h3 {
+    color: #c0c0c0;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.3rem;
+}
+
+.icon-large {
+    font-size: 3rem;
+    color: #a777e3;
+    margin-bottom: 1rem;
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.project-card h3 {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 2.5rem;
+    color: #aaa;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.modal h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.modal p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.modal .btn {
+    margin-top: 1rem;
+}
+
+/* FILOSOFIA - NOVO ESTILO */
+.philosophy-statement {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #ffffff;
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 1.8rem 2.5rem;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(15, 15, 15, 0.9));
+    border: 1px solid rgba(100, 100, 255, 0.3);
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.philosophy-statement::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(100, 100, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* FORMULÁRIO */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 1rem;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form button {
+    justify-self: start;
+    margin-top: 0.5rem;
+}
+
+/* CONTATO LINKS */
+.contact-links {
+    margin-top: 2rem;
+}
+
+.contact-links .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    background: #0f0f0f;
+    color: #888;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header {
+        padding: 4rem 1rem 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn {
+        display: block;
+        margin: 0.8rem auto;
+        max-width: 280px;
+    }
+    .project-card, .skill-card {
+        max-width: 100%;
+    }
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    .logo-img {
+        width: 200px;
+    }
+    .philosophy-statement {
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+}

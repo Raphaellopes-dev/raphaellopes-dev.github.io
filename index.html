@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raphael Lopes</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- LOGO IMAGEM -->
+            <img src="img/logo.png" alt="Logo Raphael Lopes" class="logo-img" data-aos="fade-up">
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="400">
+                Dev FullStack, criador de softwares | Sistemas Web, Aplicações e Scripts para Jogos
+            </p>
+            <div class="header-buttons" data-aos="fade-up" data-aos-delay="600">
+                <a href="#projetos" class="btn">Meus Projetos</a>
+                <a href="#contato" class="btn outline">Vamos Conversar?</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Sobre Raphael Lopes</h2>
+            <p>
+                Sou Raphael Lopes, Desenvolvedor FullStack e <strong>criador de softwares sob medida</strong>.
+                Transformo ideias em <strong>soluções completas</strong> — desde o conceito até o deploy.
+                Desenvolvo <strong>sistemas web, desktop, aplicações personalizadas e scripts para jogos</strong> usando <strong>Python, .NET, C#, React, Java e JavaScript</strong>.
+            </p>
+            <p>
+                Minha trajetória combina suporte técnico, automação de processos e <strong>construção de softwares escaláveis</strong>.
+                Além de sistemas corporativos, também crio <strong>scripts de IA, lógicas de jogo e mecânicas interativas</strong> — unindo tecnologia e criatividade.
+                Entrego produtos que não só funcionam — <strong>simplificam, automatizam e geram resultado real</strong>.
+            </p>
+        </div>
+    </section>
+
+    <section id="habilidades" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <!-- Backend -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-server icon-large"></i>
+                    <h3>Backend</h3>
+                    <p>.NET Core, Python (Flask/Django)</p>
+                </div>
+                <!-- Frontend -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-laptop-code icon-large"></i>
+                    <h3>Frontend</h3>
+                    <p>React, HTML5, CSS3, JavaScript</p>
+                </div>
+                <!-- DevOps -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-docker icon-large"></i>
+                    <h3>DevOps</h3>
+                    <p>Docker, Git/GitHub, CI/CD</p>
+                </div>
+                <!-- Arquitetura de Software -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-diagram-project icon-large"></i>
+                    <h3>Arquitetura de Software</h3>
+                    <p>MVC, Clean Architecture, Microservices</p>
+                </div>
+                <!-- UX & Design de Produto -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-paint-brush icon-large"></i>
+                    <h3>UX & Design de Produto</h3>
+                    <p>Figma, Wireframing, Prototipagem</p>
+                </div>
+                <!-- Java & Game Scripting -->
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fab fa-java icon-large"></i>
+                    <h3>Java & Game Scripting</h3>
+                    <p>Java, JavaScript, Lógica de Jogos, Game Mechanics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <!-- Projeto Web 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Sistema de Gestão Comercial</h3>
+                    <p>Aplicação fullstack com .NET + React + SQL Server.</p>
+                    <button class="btn small" onclick="openProject('projeto1')">Ver detalhes →</button>
+                </div>
+
+                <!-- Projeto Web 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>API de Automação de Processos</h3>
+                    <p>Desenvolvida em Python (Flask) para integração entre sistemas.</p>
+                    <button class="btn small" onclick="openProject('projeto2')">Ver detalhes →</button>
+                </div>
+
+                <!-- Projeto Web 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Dashboard de Monitoramento</h3>
+                    <p>Frontend em React com gráficos dinâmicos e consumo de API.</p>
+                    <button class="btn small" onclick="openProject('projeto3')">Ver detalhes →</button>
+                </div>
+
+                <!-- Software 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>ERP Educacional</h3>
+                    <p>Software de gestão escolar com módulos financeiro, acadêmico e RH.</p>
+                    <button class="btn small" onclick="openProject('projeto4')">Ver detalhes →</button>
+                </div>
+
+                <!-- Software 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Controle de Estoque Industrial</h3>
+                    <p>Sistema desktop + web para fábricas, com leitor de código de barras.</p>
+                    <button class="btn small" onclick="openProject('projeto5')">Ver detalhes →</button>
+                </div>
+
+                <!-- Projeto Game Scripting -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <h3>Script de IA para Jogo de Estratégia</h3>
+                    <p>Desenvolvido em Java e JavaScript para comportamento de NPCs.</p>
+                    <button class="btn small" onclick="openProject('projeto7')">Ver detalhes →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes do Projeto -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Conteúdo injetado via JS -->
+            </div>
+        </div>
+    </div>
+
+    <section id="filosofia" class="section">
+        <div class="container" data-aos="fade-up">
+            <div class="philosophy-statement">
+                “Tecnologia deve simplificar processos, melhorar resultados e tornar a vida das pessoas mais fácil.”
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Entre em Contato</h2>
+            <p>Estou aberto a networking, colaborações, freelas e parcerias que façam diferença.</p>
+
+            <!-- Formulário Formspree -->
+            <form action="https://formspree.io/f/mvgbnebv" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+
+            <div class="contact-links">
+                <a href="mailto:raphael@email.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/raphaellopes" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/raphaellopes" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Raphael Lopes. Feito com ☕ em Python, .NET, Java & React.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        function openProject(id) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+
+            const projects = {
+                projeto1: `
+                    <h2>Sistema de Gestão Comercial</h2>
+                    <p><strong>Tecnologias:</strong> .NET Core, React, SQL Server, JWT, Docker</p>
+                    <p><strong>Descrição:</strong> Sistema completo de gestão para pequenas e médias empresas, com módulos de vendas, estoque, financeiro e relatórios gerenciais. API REST segura com autenticação por token. Containerizado com Docker para fácil deploy.</p>
+                    <p><strong>Desafios:</strong> Integração em tempo real entre frontend e backend, otimização de queries complexas, escalabilidade para +500 usuários simultâneos.</p>
+                `,
+                projeto2: `
+                    <h2>API de Automação de Processos</h2>
+                    <p><strong>Tecnologias:</strong> Python, Flask, Redis, RabbitMQ, PostgreSQL</p>
+                    <p><strong>Descrição:</strong> API desenvolvida para automatizar fluxos manuais entre sistemas legados e novas plataformas. Processa +10 mil requisições/dia, com fila de tarefas assíncronas e retry automático em caso de falha.</p>
+                    <p><strong>Resultado:</strong> Redução de 70% no tempo de processamento e eliminação de erros humanos.</p>
+                `,
+                projeto3: `
+                    <h2>Dashboard de Monitoramento</h2>
+                    <p><strong>Tecnologias:</strong> React, Chart.js, Axios, Node.js, WebSocket</p>
+                    <p><strong>Descrição:</strong> Painel administrativo em tempo real que exibe métricas de desempenho, uso de recursos e alertas. Conectado a múltiplas APIs e atualiza dados a cada 5 segundos sem refresh da página.</p>
+                    <p><strong>Diferencial:</strong> UX otimizada para tomada de decisão rápida, filtros dinâmicos e exportação de relatórios em PDF/CSV.</p>
+                `,
+                projeto4: `
+                    <h2>ERP Educacional</h2>
+                    <p><strong>Tecnologias:</strong> .NET MAUI, SQL Server, React, Azure</p>
+                    <p><strong>Descrição:</strong> Software completo para gestão de escolas e cursos. Controle de matrículas, boletos, frequência, notas e RH em um único sistema.</p>
+                    <p><strong>Destaque:</strong> Interface adaptável para diretores, professores e secretários. Relatórios gerenciais em tempo real.</p>
+                `,
+                projeto5: `
+                    <h2>Controle de Estoque Industrial</h2>
+                    <p><strong>Tecnologias:</strong> C#, WPF, MySQL, APIs REST</p>
+                    <p><strong>Descrição:</strong> Sistema híbrido (desktop + web) para fábricas e distribuidoras. Integra leitor de código de barras, alertas de reposição e dashboards de saída de produtos.</p>
+                    <p><strong>Resultado:</strong> Redução de 30% em perdas por vencimento e ruptura de estoque.</p>
+                `,
+                projeto6: `
+                    <h2>App de Atendimento Clínico</h2>
+                    <p><strong>Tecnologias:</strong> Electron.js, Node.js, PostgreSQL, JWT</p>
+                    <p><strong>Descrição:</strong> Software para clínicas médicas com prontuário digital, agendamento online, faturamento integrado e lembretes automáticos para pacientes.</p>
+                    <p><strong>Diferencial:</strong> Sincronização offline e compliance com LGPD.</p>
+                `,
+                projeto7: `
+                    <h2>Script de IA para Jogo de Estratégia</h2>
+                    <p><strong>Tecnologias:</strong> Java, JavaScript, Phaser.js, Node.js</p>
+                    <p><strong>Descrição:</strong> Desenvolvimento de scripts de IA para NPCs em jogo de estratégia. Comportamentos adaptativos, tomada de decisão baseada em estado e integração com engine de jogo via WebSockets.</p>
+                    <p><strong>Diferencial:</strong> Sistema de "personalidade" para NPCs, permitindo jogabilidade única a cada partida.</p>
+                `
+            };
+
+            modalBody.innerHTML = projects[id];
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

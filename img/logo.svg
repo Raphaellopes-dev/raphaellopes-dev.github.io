@@ -1,58 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0a0f"/>
-      <stop offset="100%" stop-color="#12121a"/>
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
     <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#667eea"/>
-      <stop offset="50%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#764ba2"/>
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="50%" stop-color="#00cc77"/>
+      <stop offset="100%" stop-color="#009955"/>
     </linearGradient>
     <linearGradient id="rGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e8e8ff"/>
-      <stop offset="40%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#667eea"/>
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#e0ffe8"/>
+      <stop offset="70%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#00cc77"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f093fb" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#667eea" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00cc77" stop-opacity="0"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="softGlow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <!-- Background circle -->
-  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#border)" stroke-width="3" opacity="0.8"/>
+  <!-- Outer hexagon shape -->
+  <path d="M256 20 L470 138 L470 374 L256 492 L42 374 L42 138 Z" fill="url(#bg)" stroke="url(#border)" stroke-width="2.5" opacity="0.9"/>
 
-  <!-- Inner ring -->
-  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#border)" stroke-width="0.8" opacity="0.3"/>
+  <!-- Inner hex ring -->
+  <path d="M256 52 L434 150 L434 362 L256 460 L78 362 L78 150 Z" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.25"/>
 
-  <!-- Orbital rings (quantum feel) -->
-  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(-30 256 256)"/>
-  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(30 256 256)"/>
-  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(90 256 256)"/>
+  <!-- Circuit lines - top left -->
+  <path d="M120 160 L140 160 L140 190 L160 190" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="160" cy="190" r="3" fill="#00ff88" opacity="0.4"/>
 
-  <!-- Quantum dots on orbital rings -->
-  <circle cx="456" cy="256" r="3" fill="#a78bfa" opacity="0.4"/>
-  <circle cx="56" cy="256" r="3" fill="#a78bfa" opacity="0.4"/>
-  <circle cx="329" cy="112" r="2.5" fill="#667eea" opacity="0.3"/>
-  <circle cx="183" cy="400" r="2.5" fill="#667eea" opacity="0.3"/>
-  <circle cx="354" cy="391" r="2" fill="#764ba2" opacity="0.25"/>
-  <circle cx="158" cy="121" r="2" fill="#764ba2" opacity="0.25"/>
+  <!-- Circuit lines - top right -->
+  <path d="M392 160 L372 160 L372 190 L352 190" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="352" cy="190" r="3" fill="#00ff88" opacity="0.4"/>
 
-  <!-- Circuit-like decorative lines -->
-  <path d="M370 140 L400 140 L400 200" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
-  <path d="M142 372 L112 372 L112 312" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
-  <circle cx="400" cy="200" r="2.5" fill="#a78bfa" opacity="0.4"/>
-  <circle cx="112" cy="312" r="2.5" fill="#a78bfa" opacity="0.4"/>
+  <!-- Circuit lines - bottom -->
+  <path d="M160 340 L180 340 L180 370 L200 370" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="200" cy="370" r="3" fill="#00ff88" opacity="0.4"/>
+  <path d="M352 340 L332 340 L332 370 L312 370" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="312" cy="370" r="3" fill="#00ff88" opacity="0.4"/>
+
+  <!-- Orbital rings -->
+  <ellipse cx="256" cy="256" rx="175" ry="65" fill="none" stroke="url(#border)" stroke-width="0.5" opacity="0.12" transform="rotate(-25 256 256)"/>
+  <ellipse cx="256" cy="256" rx="175" ry="65" fill="none" stroke="url(#border)" stroke-width="0.5" opacity="0.12" transform="rotate(25 256 256)"/>
+
+  <!-- Quantum dots on orbitals -->
+  <circle cx="422" cy="224" r="2" fill="#00ff88" opacity="0.3"/>
+  <circle cx="90" cy="288" r="2" fill="#00ff88" opacity="0.3"/>
+  <circle cx="328" cy="136" r="2" fill="#00cc77" opacity="0.25"/>
+  <circle cx="184" cy="376" r="2" fill="#00cc77" opacity="0.25"/>
 
   <!-- Main letter R -->
   <g filter="url(#glow)">
@@ -78,17 +83,19 @@
     " fill="url(#rGrad)"/>
   </g>
 
-  <!-- Small accent dot (like a semicolon or code element) -->
+  <!-- Terminal cursor accent -->
   <g filter="url(#softGlow)">
-    <circle cx="196" cy="370" r="6" fill="#f093fb" opacity="0.8"/>
+    <rect x="194" y="369" width="4" height="16" rx="1" fill="#00ff88" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.1;0.7" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
   </g>
 
-  <!-- Subtle corner decorative brackets -->
-  <path d="M 140 140 L 160 140 L 160 160" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
-  <path d="M 372 140 L 352 140 L 352 160" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
-  <path d="M 140 372 L 160 372 L 160 352" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
-  <path d="M 372 372 L 352 372 L 352 352" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Corner brackets (code theme) -->
+  <path d="M 100 130 L 115 130 L 115 145" fill="none" stroke="url(#border)" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 412 130 L 397 130 L 397 145" fill="none" stroke="url(#border)" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 100 382 L 115 382 L 115 367" fill="none" stroke="url(#border)" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 412 382 L 397 382 L 397 367" fill="none" stroke="url(#border)" stroke-width="1.2" opacity="0.25"/>
 
-  <!-- Outer glow ring -->
-  <circle cx="256" cy="256" r="248" fill="none" stroke="#667eea" stroke-width="2" opacity="0.15" filter="url(#glow)"/>
+  <!-- Outer glow -->
+  <path d="M256 20 L470 138 L470 374 L256 492 L42 374 L42 138 Z" fill="none" stroke="#00ff88" stroke-width="1.5" opacity="0.08" filter="url(#glow)"/>
 </svg>

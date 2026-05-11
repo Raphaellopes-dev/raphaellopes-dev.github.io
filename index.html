@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Lopes — Dev FullStack</title>
-    <meta name="description" content="Portfolio de Raphael Lopes — Desenvolvedor FullStack especializado em Python, .NET, C#, React, Java e JavaScript.">
+    <meta name="description" content="Portfolio de Raphael Lopes — Desenvolvedor FullStack especializado em Python, C#, PHP, JavaScript e React.">
     <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,15 +18,21 @@
     <!-- Particle Canvas -->
     <canvas id="particles-canvas"></canvas>
 
+    <!-- Grid Background -->
+    <div class="bg-grid"></div>
+
     <!-- NAV -->
     <nav class="nav-bar" id="navBar">
-        <a href="#" class="nav-logo">&lt;<span>R</span>/&gt;</a>
+        <a href="#" class="nav-logo">
+            <img src="img/logo.svg" alt="R" class="nav-logo-img">
+            <span>Raphael Lopes</span>
+        </a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about" data-nav>Sobre</a></li>
             <li><a href="#skills" data-nav>Skills</a></li>
             <li><a href="#projects" data-nav>Projetos</a></li>
-            <li><a href="#philosophy" data-nav>Filosofia</a></li>
+            <li><a href="#github" data-nav>GitHub</a></li>
             <li><a href="#contact" data-nav>Contato</a></li>
         </ul>
     </nav>
@@ -35,12 +41,28 @@
     <section class="hero" id="hero">
         <div class="hero-glow"></div>
         <div class="hero-content" data-reveal>
-            <img src="img/logo.svg" alt="Raphael Lopes" class="hero-logo" id="heroLogo">
-            <h1>Raphael Lopes</h1>
-            <div class="typewriter" id="typewriter"><span id="typeText"></span><span class="cursor"></span></div>
+            <div class="hero-badge">FullStack Developer</div>
+            <h1>Raphael<br><span class="highlight">Lopes</span></h1>
+            <div class="typewriter"><span id="typeText"></span><span class="cursor"></span></div>
             <div>
                 <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> Ver Projetos</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contato</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-terminal"></i> Contato</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">5</div>
+                    <div class="hero-stat-label">Repositórios</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">3</div>
+                    <div class="hero-stat-label">Linguagens</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">2</div>
+                    <div class="hero-stat-label">Projetos Próprios</div>
+                </div>
             </div>
         </div>
     </section>
@@ -48,19 +70,34 @@
     <!-- ABOUT -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title" data-reveal>Sobre Mim</h2>
-            <p class="section-sub" data-reveal data-reveal-delay="100">FullStack Developer &bull; Brasil</p>
+            <div class="section-header" data-reveal>
+                <div class="section-tag">Sobre</div>
+                <h2 class="section-title">Quem sou</h2>
+                <p class="section-sub">Desenvolvedor brasileiro, apaixonado por transformar linhas de código em soluções reais.</p>
+            </div>
             <div class="about-grid">
                 <div class="about-text" data-reveal data-reveal-delay="200">
-                    <p>Olá! Sou <strong>Raphael Lopes</strong>, desenvolvedor <strong>FullStack</strong> apaixonado por tecnologia e inovação. Trabalho com <strong>Python, .NET, C#, React, Java e JavaScript</strong>, criando soluções inteligentes que unem performance, design e experiência do usuário.</p>
-                    <p>Minha jornada na tecnologia começou com a curiosidade de entender como as coisas funcionam — e hoje transformo essa curiosidade em produtos digitais que fazem a diferença. Acredito que código bem escrito é poesia em movimento.</p>
-                    <p>Atualmente focado em <strong>inteligência artificial, automação e sistemas web escaláveis</strong>, estou sempre explorando novas fronteiras da computação.</p>
+                    <p>Me chamo <strong>Raphael Lopes</strong>, desenvolvedor <strong>FullStack</strong> com experiência em <strong>Python, PHP, C#, .NET, JavaScript e React</strong>. Comecei minha jornada explorando sistemas e games, e hoje construo aplicações que unem lógica, performance e design.</p>
+                    <p>Já desenvolvi desde sistemas financeiros completos até jogos com Pygame, sempre buscando escrever código limpo e bem estruturado. Atualmente focado em <strong>back-end, automação e desenvolvimento web</strong>.</p>
+                    <p>Acredito que tecnologia de verdade resolve problemas de verdade — e é isso que me move.</p>
                 </div>
-                <div class="about-stats" data-reveal data-reveal-delay="300">
-                    <div class="stat-card"><div class="stat-number">6+</div><div class="stat-label">Projetos Entregues</div></div>
-                    <div class="stat-card"><div class="stat-number">6</div><div class="stat-label">Tecnologias Domínio</div></div>
-                    <div class="stat-card"><div class="stat-number">Full</div><div class="stat-label">Stack Completo</div></div>
-                    <div class="stat-card"><div class="stat-number">∞</div><div class="stat-label">Café Consumido</div></div>
+                <div class="about-highlights" data-reveal data-reveal-delay="300">
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <span><strong>FullStack</strong><br>Front + Back + Banco</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-gamepad"></i>
+                        <span><strong>Game Dev</strong><br>Python + Pygame</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-database"></i>
+                        <span><strong>Bancos</strong><br>MySQL, SQLite</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-terminal"></i>
+                        <span><strong>Automação</strong><br>Scripts & Ferramentas</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,38 +106,41 @@
     <!-- SKILLS -->
     <section class="section" id="skills">
         <div class="container">
-            <h2 class="section-title" data-reveal>Skills</h2>
-            <p class="section-sub" data-reveal data-reveal-delay="100">Tecnologias que domino e aplico no dia a dia</p>
+            <div class="section-header" data-reveal>
+                <div class="section-tag">Skills</div>
+                <h2 class="section-title">Tecnologias</h2>
+                <p class="section-sub">Ferramentas que uso para criar, construir e inovar.</p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card" data-reveal data-reveal-delay="100">
                     <div class="skill-icon"><i class="fab fa-python"></i></div>
                     <h3>Python</h3>
-                    <p>Desenvolvimento backend, automação, análise de dados e scripts inteligentes.</p>
+                    <p>Scripts, automação, Pygame, análise de dados</p>
+                </div>
+                <div class="skill-card" data-reveal data-reveal-delay="150">
+                    <div class="skill-icon"><i class="fab fa-php"></i></div>
+                    <h3>PHP</h3>
+                    <p>Sistemas web completos com MySQL</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="200">
                     <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
                     <h3>C# / .NET</h3>
-                    <p>Aplicações empresariais robustas com .NET, ASP.NET Core e Entity Framework.</p>
+                    <p>Orientação a objetos, desafios DIO</p>
+                </div>
+                <div class="skill-card" data-reveal data-reveal-delay="250">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <p>DOM, async, APIs, React</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="300">
                     <div class="skill-icon"><i class="fab fa-react"></i></div>
                     <h3>React</h3>
-                    <p>Interfaces modernas e reativas com React, Hooks, Next.js e ecossistema frontend.</p>
+                    <p>Componentes, hooks, interfaces modernas</p>
                 </div>
-                <div class="skill-card" data-reveal data-reveal-delay="400">
-                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                    <h3>JavaScript</h3>
-                    <p>Vanilla JS, manipulação DOM, async/await, consumo de APIs e muito mais.</p>
-                </div>
-                <div class="skill-card" data-reveal data-reveal-delay="500">
-                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                    <h3>TypeScript</h3>
-                    <p>Código escalável com tipagem forte, interfaces e generics no ecossistema TS.</p>
-                </div>
-                <div class="skill-card" data-reveal data-reveal-delay="600">
-                    <div class="skill-icon"><i class="fab fa-java"></i></div>
-                    <h3>Java</h3>
-                    <p>Sistemas corporativos com Spring Boot, JPA, microsserviços e APIs REST.</p>
+                <div class="skill-card" data-reveal data-reveal-delay="350">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>SQL</h3>
+                    <p>MySQL, PostgreSQL, modelagem de dados</p>
                 </div>
             </div>
         </div>
@@ -109,140 +149,119 @@
     <!-- PROJECTS -->
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title" data-reveal>Projetos</h2>
-            <p class="section-sub" data-reveal data-reveal-delay="100">Soluções reais que transformam ideias em impacto</p>
+            <div class="section-header" data-reveal>
+                <div class="section-tag">Projetos</div>
+                <h2 class="section-title">Código &amp; Criação</h2>
+                <p class="section-sub">Projetos reais que construí — disponíveis no GitHub.</p>
+            </div>
             <div class="projects-grid">
 
-                <!-- 1 -->
-                <div class="project-card" data-reveal data-reveal-delay="100" onclick="openModal('modal1')">
-                    <span class="project-tag">Smart City</span>
-                    <h3>Smart City — Análise de Dados Urbanos</h3>
-                    <p>Plataforma inteligente para análise de dados urbanos com visualizações interativas e relatórios automatizados.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
+                <!-- 1 - Sistema Financeiro -->
+                <div class="project-card" data-reveal data-reveal-delay="100">
+                    <span class="project-tag">PHP</span>
+                    <h3>Sistema Financeiro Pessoal</h3>
+                    <div class="project-lang"><span class="dot" style="background:#777bb3;"></span> PHP &bull; MySQL &bull; JS</div>
+                    <p>Sistema de controle financeiro pessoal multiusuário. Gerencia receitas, despesas, categorias e saldos com autenticação segura e dashboard interativo.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raphaellopes-dev/sistema-financeiro-pessoal" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
+                    </div>
                 </div>
 
-                <!-- 2 -->
-                <div class="project-card" data-reveal data-reveal-delay="200" onclick="openModal('modal2')">
-                    <span class="project-tag">Finanças</span>
-                    <h3>Stock Analysis — Análise de Ações</h3>
-                    <p>Sistema de análise de ações com dados em tempo real, indicadores técnicos e previsões baseadas em IA.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
+                <!-- 2 - Snake Rush -->
+                <div class="project-card" data-reveal data-reveal-delay="200">
+                    <span class="project-tag">Python</span>
+                    <h3>Snake Rush</h3>
+                    <div class="project-lang"><span class="dot" style="background:#3572A5;"></span> Python &bull; Pygame</div>
+                    <p>Jogo da Cobrinha moderno com Pygame. Versão repaginada do clássico com sistema de pontuação, fases progressivas e efeitos visuais. Código limpo e modularizado.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raphaellopes-dev/snake-rush" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
+                        <a href="https://github.com/Raphaellopes-dev/snake-rush" target="_blank" rel="noopener" class="btn btn-primary btn-small"><i class="fas fa-play"></i> Ver Código</a>
+                    </div>
                 </div>
 
-                <!-- 3 -->
-                <div class="project-card" data-reveal data-reveal-delay="300" onclick="openModal('modal3')">
-                    <span class="project-tag">IA</span>
-                    <h3>ChatBot Inteligente</h3>
-                    <p>Assistente virtual com processamento de linguagem natural, capaz de manter conversas contextuais e executar tarefas.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
+                <!-- 3 - Trilha .NET Fundamentos -->
+                <div class="project-card" data-reveal data-reveal-delay="300">
+                    <span class="project-tag">C#</span>
+                    <h3>Estudos .NET — Fundamentos</h3>
+                    <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
+                    <p>Desafio prático de fundamentos .NET da DIO. Implementação de conceitos como classes, métodos, encapsulamento, herança e manipulação de dados com C#.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raphaellopes-dev/trilha-net-fundamentos-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
+                    </div>
                 </div>
 
-                <!-- 4 -->
-                <div class="project-card" data-reveal data-reveal-delay="400" onclick="openModal('modal4')">
-                    <span class="project-tag">Social</span>
-                    <h3>IA Recomeço — Apoio a Enchentes</h3>
-                    <p>Plataforma de apoio às vítimas de enchentes no Rio Grande do Sul com cadastro de afetados e doações.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
+                <!-- 4 - Trilha .NET POO -->
+                <div class="project-card" data-reveal data-reveal-delay="400">
+                    <span class="project-tag">C#</span>
+                    <h3>Estudos .NET — POO</h3>
+                    <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
+                    <p>Desafio de Programação Orientada a Objetos com .NET. Abstração, interfaces, polimorfismo e boas práticas no ecossistema .NET.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raphaellopes-dev/trilha-net-poo-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
+                    </div>
                 </div>
 
-                <!-- 5 -->
-                <div class="project-card" data-reveal data-reveal-delay="500" onclick="openModal('modal5')">
-                    <span class="project-tag">Crypto</span>
-                    <h3>Cripto IA — Análise de Criptomoedas</h3>
-                    <p>Ferramenta de análise de criptomoedas com machine learning para predição de tendências de mercado.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
-                </div>
-
-                <!-- 6 -->
-                <div class="project-card" data-reveal data-reveal-delay="600" onclick="openModal('modal6')">
-                    <span class="project-tag">Blog</span>
-                    <h3>Blog IA — Automação de Conteúdo</h3>
-                    <p>Blog automatizado com geração de conteúdo usando inteligência artificial e estratégias de SEO.</p>
-                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
+                <!-- 5 - Trilha .NET Explorando -->
+                <div class="project-card" data-reveal data-reveal-delay="500">
+                    <span class="project-tag">C#</span>
+                    <h3>Estudos .NET — Explorando</h3>
+                    <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
+                    <p>Desafio de exploração de APIs e bibliotecas .NET. Consumo de dados, serialização, manipulação de arquivos e conceitos avançados da plataforma.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raphaellopes-dev/trilha-net-explorando-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- MODALS -->
-    <!-- Modal 1 -->
-    <div class="modal" id="modal1">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
-            <h2>Smart City — Análise de Dados Urbanos</h2>
-            <p><strong>Stack:</strong> Python, Pandas, Streamlit, PostgreSQL, Machine Learning</p>
-            <p>Plataforma inteligente voltada para a análise de dados urbanos. A ferramenta consome dados abertos de cidades brasileiras e gera visualizações interativas sobre mobilidade, segurança, educação e saúde.</p>
-            <p><strong>Funcionalidades:</strong> Dashboards dinâmicos, relatórios automatizados em PDF, mapa de calor interativo, predição de indicadores com ML, e exportação de dados. A plataforma auxilia gestores públicos na tomada de decisões baseada em dados.</p>
-            <p><strong>Resultado:</strong> Redução de 40% no tempo de análise de indicadores urbanos.</p>
+    <!-- GITHUB -->
+    <section class="section" id="github">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">GitHub</div>
+                <h2 class="section-title">Atividade Open Source</h2>
+                <p class="section-sub">Meus repositórios, commits e contribuições ao vivo.</p>
+            </div>
+            <div class="github-embed" data-reveal data-reveal-delay="100">
+                <a href="https://github.com/Raphaellopes-dev" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+                    <div class="github-header">
+                        <img src="https://avatars.githubusercontent.com/u/211996845?v=4" alt="Avatar" class="github-avatar" loading="lazy">
+                        <div class="github-info">
+                            <h3>Raphaellopes-dev</h3>
+                            <p><i class="fab fa-github"></i> /Raphaellopes-dev &bull; <span id="ghRepos">5</span> repositórios</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="github-stats">
+                    <div class="github-stat">
+                        <div class="github-stat-num" id="ghPublicRepos">5</div>
+                        <div class="github-stat-label">Repositórios</div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="github-stat-num">2</div>
+                        <div class="github-stat-label">Projetos Próprios</div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="github-stat-num">3</div>
+                        <div class="github-stat-label">Linguagens</div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="github-stat-num">2025</div>
+                        <div class="github-stat-label">Desde</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div class="modal" id="modal2">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
-            <h2>Stock Analysis — Análise de Ações</h2>
-            <p><strong>Stack:</strong> Python, yfinance, Streamlit, Plotly, TensorFlow</p>
-            <p>Sistema completo de análise de ações que consome dados em tempo real da bolsa de valores. Utiliza algoritmos de machine learning para prever tendências de curto e médio prazo.</p>
-            <p><strong>Funcionalidades:</strong> Gráficos interativos de candlestick, indicadores técnicos (RSI, MACD, médias móveis), previsão de preços com LSTM, backtesting de estratégias, e carteira de investimentos personalizada.</p>
-            <p><strong>Destaque:</strong> Precisão de 72% nas previsões de tendência semanal.</p>
-        </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div class="modal" id="modal3">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal3')">&times;</button>
-            <h2>ChatBot Inteligente</h2>
-            <p><strong>Stack:</strong> Python, LangChain, OpenAI API, FastAPI, React, MongoDB</p>
-            <p>Assistente virtual avançado com processamento de linguagem natural usando modelos de linguagem de última geração. Capaz de manter conversas contextuais e executar tarefas complexas.</p>
-            <p><strong>Funcionalidades:</strong> Memória de conversa, integração com APIs externas, execução de comandos, suporte a múltiplos idiomas, e dashboard de analytics de conversas.</p>
-            <p><strong>Diferencial:</strong> Taxa de resolução de 85% sem intervenção humana.</p>
-        </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="modal" id="modal4">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal4')">&times;</button>
-            <h2>IA Recomeço — Apoio a Enchentes</h2>
-            <p><strong>Stack:</strong> Python, Django, React, PostgreSQL, Google Maps API</p>
-            <p>Plataforma solidária desenvolvida para apoiar as vítimas das enchentes no Rio Grande do Sul. Conecta pessoas afetadas a doadores e voluntários de forma eficiente e transparente.</p>
-            <p><strong>Funcionalidades:</strong> Cadastro de afetados, mapeamento de pontos de doação, sistema de matching entre doadores e necessitados, dashboard de transparência, e chat integrado.</p>
-            <p><strong>Impacto:</strong> Mais de 200 famílias atendidas nos primeiros 30 dias.</p>
-        </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="modal" id="modal5">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal5')">&times;</button>
-            <h2>Cripto IA — Análise de Criptomoedas</h2>
-            <p><strong>Stack:</strong> Python, Binance API, scikit-learn, Streamlit, PostgreSQL</p>
-            <p>Ferramenta avançada de análise de criptomoedas que utiliza machine learning para identificar padrões e prever movimentos do mercado.</p>
-            <p><strong>Funcionalidades:</strong> Análise em tempo real de 50+ criptomoedas, indicadores personalizados, alertas inteligentes, simulação de portfólio, e relatórios semanais de performance.</p>
-            <p><strong>Performance:</strong> Rentabilidade 15% acima do buy-and-hold em testes.</p>
-        </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="modal" id="modal6">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal6')">&times;</button>
-            <h2>Blog IA — Automação de Conteúdo</h2>
-            <p><strong>Stack:</strong> Python, GPT API, WordPress API, SEMRush, Next.js</p>
-            <p>Blog automatizado que utiliza inteligência artificial para gerar, otimizar e publicar conteúdo relevante sobre tecnologia e inovação.</p>
-            <p><strong>Funcionalidades:</strong> Geração automática de artigos, SEO inteligente, agendamento de posts, análise de palavras-chave, e dashboard de métricas de engajamento.</p>
-            <p><strong>Resultado:</strong> Crescimento de 300% no tráfego orgânico em 3 meses.</p>
-        </div>
-    </div>
+    </section>
 
     <!-- PHILOSOPHY -->
     <section class="section" id="philosophy">
         <div class="container">
             <div class="philosophy-block" data-reveal>
                 <div class="philosophy-text">A tecnologia não é apenas ferramenta — é a ponte entre o impossível e o realizado. Cada linha de código é um passo em direção ao futuro que imaginamos.</div>
+                <div class="philosophy-author">— Raphael Lopes</div>
             </div>
         </div>
     </section>
@@ -250,15 +269,18 @@
     <!-- CONTACT -->
     <section class="section" id="contact">
         <div class="container">
-            <h2 class="section-title" data-reveal>Contato</h2>
-            <p class="section-sub" data-reveal data-reveal-delay="100">Vamos transformar sua ideia em código?</p>
-            <div class="contact-wrapper" data-reveal data-reveal-delay="200">
+            <div class="section-header" data-reveal>
+                <div class="section-tag">Contato</div>
+                <h2 class="section-title">Vamos conversar</h2>
+                <p class="section-sub">Tem um projeto em mente? Mande uma mensagem.</p>
+            </div>
+            <div class="contact-wrapper" data-reveal data-reveal-delay="100">
                 <form class="contact-form" action="https://formspree.io/f/mvgbnebv" method="POST">
                     <input type="text" name="name" placeholder="Seu nome" required>
                     <input type="email" name="email" placeholder="Seu e-mail" required>
                     <input type="text" name="subject" placeholder="Assunto">
                     <textarea name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar</button>
                 </form>
                 <div class="contact-links">
                     <a href="https://www.linkedin.com/in/raphaellopes" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
@@ -273,20 +295,20 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Raphael Lopes &mdash; Dev FullStack. Feito com <i class="fas fa-heart" style="color: #667eea;"></i> e código.</p>
+            <p>&copy; 2026 Raphael Lopes &mdash; Feito com <span class="heart"><i class="fas fa-heart"></i></span> e código.</p>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
     <script>
     /* ═══════════════════════════════════════════════
-       PARTICLES — Canvas Quantum System
+       PARTICLES — Emerald Canvas System
        ═══════════════════════════════════════════════ */
     (function() {
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
         let w, h, particles;
-        const COUNT = 80;
+        const COUNT = 70;
 
         function resize() {
             w = canvas.width = window.innerWidth;
@@ -301,9 +323,9 @@
                 this.x = Math.random() * w;
                 this.y = Math.random() * h;
                 this.size = Math.random() * 2 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.6;
-                this.speedY = (Math.random() - 0.5) * 0.6;
-                this.alpha = Math.random() * 0.5 + 0.2;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.alpha = Math.random() * 0.4 + 0.15;
             }
             update() {
                 this.x += this.speedX;
@@ -313,7 +335,7 @@
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(167, 139, 250, ${this.alpha})`;
+                ctx.fillStyle = `rgba(0, 255, 136, ${this.alpha})`;
                 ctx.fill();
             }
         }
@@ -326,11 +348,11 @@
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 150) {
+                    if (dist < 140) {
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(167, 139, 250, ${0.06 * (1 - dist / 150)})`;
+                        ctx.strokeStyle = `rgba(0, 255, 136, ${0.04 * (1 - dist / 140)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -353,10 +375,10 @@
     (function() {
         const el = document.getElementById('typeText');
         const texts = [
-            'Dev FullStack — Python, .NET, C#, React, Java, JS',
-            'Criando soluções inteligentes',
-            'Transformando ideias em código',
-            'IA & Automação & Inovação'
+            'Dev FullStack — Python, PHP, C#, JS, React',
+            'Criando soluções com código limpo',
+            'Transformando ideias em sistemas',
+            'Automacao & Games & Web'
         ];
         let idx = 0, charIdx = 0, isDeleting = false;
         const speed = 60, deleteSpeed = 30, pause = 2000;
@@ -388,29 +410,9 @@
     })();
 
     /* ═══════════════════════════════════════════════
-       3D TILT ON PROJECT CARDS
+       MOUSE GLOW ON CARDS
        ═══════════════════════════════════════════════ */
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const cx = rect.width / 2;
-            const cy = rect.height / 2;
-            const angleX = ((y - cy) / cy) * -6;
-            const angleY = ((x - cx) / cx) * 6;
-            card.style.transform =
-                `translateY(-8px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-        });
-    });
-
-    /* ═══════════════════════════════════════════════
-       MOUSE GLOW ON GLASS CARDS
-       ═══════════════════════════════════════════════ */
-    document.querySelectorAll('.glass-card, .skill-card, .project-card').forEach(card => {
+    document.querySelectorAll('.glass-card, .skill-card, .project-card, .highlight-item, .philosophy-block').forEach(card => {
         card.addEventListener('mousemove', e => {
             const rect = card.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -449,26 +451,6 @@
     });
 
     /* ═══════════════════════════════════════════════
-       MODALS
-       ═══════════════════════════════════════════════ */
-    function openModal(id) {
-        document.getElementById(id).style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-        document.getElementById(id).style.display = 'none';
-        document.body.style.overflow = '';
-    }
-    document.querySelectorAll('.modal').forEach(m => {
-        m.addEventListener('click', e => {
-            if (e.target === m) { closeModal(m.id); }
-        });
-        window.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && m.style.display === 'flex') { closeModal(m.id); }
-        });
-    });
-
-    /* ═══════════════════════════════════════════════
        REVEAL ON SCROLL — IntersectionObserver
        ═══════════════════════════════════════════════ */
     (function() {
@@ -483,6 +465,25 @@
             });
         }, { threshold: 0.15 });
         els.forEach(el => observer.observe(el));
+    })();
+
+    /* ═══════════════════════════════════════════════
+       GITHUB LIVE STATS (fallback static)
+       ═══════════════════════════════════════════════ */
+    (function() {
+        const repoCount = document.getElementById('ghRepos');
+        const publicRepos = document.getElementById('ghPublicRepos');
+        if (repoCount && publicRepos) {
+            fetch('https://api.github.com/users/Raphaellopes-dev')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.public_repos !== undefined) {
+                        repoCount.textContent = data.public_repos;
+                        publicRepos.textContent = data.public_repos;
+                    }
+                })
+                .catch(() => {});
+        }
     })();
     </script>
 

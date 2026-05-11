@@ -33,7 +33,7 @@ html {
     --bg-card: rgba(255, 255, 255, 0.02);
     --text-primary: #e8e8e8;
     --text-secondary: rgba(255, 255, 255, 0.62);
-    --text-muted: rgba(255, 255, 255, 0.2);
+    --text-muted: rgba(255, 255, 255, 0.35);
     --border-subtle: rgba(0, 255, 136, 0.08);
     --border-hover: rgba(0, 255, 136, 0.2);
 }
@@ -126,7 +126,7 @@ body {
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     transition: all 0.3s;
     position: relative;
     font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
@@ -167,7 +167,6 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 0;
     position: relative;
     z-index: 1;
 }
@@ -389,7 +388,7 @@ body {
 
 /* ── SECTION ── */
 .section {
-    padding: 6rem 0;
+    padding: 5rem 0;
     position: relative;
     z-index: 1;
 }
@@ -863,6 +862,7 @@ footer .heart {
     .about-highlights { grid-template-columns: 1fr 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    .section { padding: 3rem 0; }
     .section-title { font-size: 28px; }
     .philosophy-text { font-size: 1.2rem; }
     .philosophy-block { padding: 2rem; }

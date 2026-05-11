@@ -113,6 +113,13 @@ body {
     text-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
 }
 
+.nav-prompt {
+    color: rgba(0, 255, 136, 0.35);
+    font-weight: 300;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
+    margin-right: 2px;
+}
+
 .nav-links {
     display: flex;
     gap: 32px;

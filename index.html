@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Lopes — Dev & Security</title>
-    <meta name="description" content="Portfolio de Raphael Lopes — Desenvolvedor FullStack, Pentest & Linux.">
+    <meta name="description" content="Portfolio de Raphael Lopes — Dev FullStack, Pentest & Linux.">
     <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -29,39 +29,27 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO — Terminal Hacker -->
     <section class="hero" id="hero">
         <div class="hero-glow"></div>
-        <div class="hero-content" data-reveal>
-            <div class="hero-badge">Dev FullStack & Security</div>
-            <div class="hero-logo-container">
-                <img src="img/logo.svg" alt="Raphael Lopes" class="hero-logo-main">
+        <div class="terminal" data-reveal>
+            <div class="terminal-bar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">raphael@lopes:~/portfolio</span>
             </div>
-            <div class="typewriter"><span id="typeText"></span><span class="cursor"></span></div>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> Projetos</a>
-                <a href="https://github.com/Raphaellopes-dev" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-num">11</div>
-                    <div class="hero-stat-label">Repositórios</div>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <div class="hero-stat-num">5</div>
-                    <div class="hero-stat-label">Linguagens</div>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <div class="hero-stat-num">8</div>
-                    <div class="hero-stat-label">Projetos Próprios</div>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat">
-                    <div class="hero-stat-num">Linux</div>
-                    <div class="hero-stat-label">Pentest &amp; Security</div>
-                </div>
+            <div class="terminal-body">
+                <div class="terminal-line"><span class="prompt">┌─</span> <span class="host">raphael@lopes</span><span class="sep">:</span><span class="path">~</span></div>
+                <div class="terminal-line"><span class="prompt">├─</span> Raphael Lopes</div>
+                <div class="terminal-line"><span class="prompt">├─</span> Dev FullStack <span class="amp">&amp;</span> Pentest</div>
+                <div class="terminal-line terminal-line-empty"></div>
+                <div class="terminal-line"><span class="prompt">├──</span> Sistema ...... <span class="val">Linux</span></div>
+                <div class="terminal-line"><span class="prompt">├──</span> Skills ....... <span class="val">Python, PHP, C#, JS, React</span></div>
+                <div class="terminal-line"><span class="prompt">├──</span> Pentest ...... <span class="val">nmap, sqlmap, hydra, nikto</span></div>
+                <div class="terminal-line"><span class="prompt">├──</span> Projetos ..... <span class="val">11 repositorios no GitHub</span></div>
+                <div class="terminal-line terminal-line-empty"></div>
+                <div class="terminal-line"><span class="prompt">└─</span> <span class="cursor-line">raphael@lopes:~$ <span class="terminal-cursor" id="heroCursor">_</span></span></div>
             </div>
         </div>
     </section>
@@ -112,122 +100,111 @@
             </div>
             <div class="projects-grid">
 
-                <!-- 1 - Pentest Toolkit -->
                 <div class="project-card" data-reveal data-reveal-delay="100">
                     <span class="project-tag">Python</span>
                     <h3>Pentest Toolkit</h3>
                     <div class="project-lang"><span class="dot" style="background:#3572A5;"></span> Python &bull; Socket &bull; Threading</div>
-                    <p>Kit de ferramentas de pentest em Python: scanner de portas multi-thread, detecção de serviços, banner grabbing e gerador de relatórios HTML profissionais com análise de severidade.</p>
+                    <p>Kit de ferramentas de pentest: scanner de portas multi-thread, detecção de serviços, banner grabbing e relatórios HTML.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/pentest-toolkit" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 2 - Web Security Scanner -->
                 <div class="project-card" data-reveal data-reveal-delay="150">
                     <span class="project-tag">Python</span>
                     <h3>Web Security Scanner</h3>
                     <div class="project-lang"><span class="dot" style="background:#3572A5;"></span> Python &bull; requests &bull; SSL</div>
-                    <p>Scanner de segurança web: auditoria de headers HTTP (CSP, HSTS, X-Frame-Options), detecção de XSS refletido e SQLi error-based, validação SSL/TLS e geração de relatórios.</p>
+                    <p>Scanner de segurança web: headers HTTP, XSS, SQLi, SSL/TLS, port scanning e relatórios.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/web-security-scanner" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 3 - Sistema Financeiro -->
                 <div class="project-card" data-reveal data-reveal-delay="200">
                     <span class="project-tag">PHP</span>
                     <h3>Sistema Financeiro Pessoal</h3>
                     <div class="project-lang"><span class="dot" style="background:#777bb3;"></span> PHP &bull; MySQL &bull; JS</div>
-                    <p>Sistema de controle financeiro pessoal multiusuário. Gerencia receitas, despesas, categorias e saldos com autenticação segura e dashboard interativo.</p>
+                    <p>Sistema de controle financeiro multiusuário com autenticação segura e dashboard interativo.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/sistema-financeiro-pessoal" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 4 - Snake Rush -->
                 <div class="project-card" data-reveal data-reveal-delay="250">
                     <span class="project-tag">Python</span>
                     <h3>Snake Rush</h3>
                     <div class="project-lang"><span class="dot" style="background:#3572A5;"></span> Python &bull; Pygame</div>
-                    <p>Jogo da Cobrinha moderno com Pygame. Versão repaginada do clássico com sistema de pontuação, fases progressivas e efeitos visuais. Código modularizado.</p>
+                    <p>Jogo da Cobrinha moderno com Pygame. Sistema de pontuação, fases progressivas e código modularizado.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/snake-rush" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 5 - Product API -->
                 <div class="project-card" data-reveal data-reveal-delay="300">
                     <span class="project-tag">C#</span>
                     <h3>Product Management API</h3>
                     <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET 8 &bull; JWT</div>
-                    <p>API REST completa com .NET 8, autenticação JWT e SQLite. CRUD de produtos com filtros, paginação e documentação Swagger. Arquitetura limpa e boas práticas.</p>
+                    <p>API REST com .NET 8, autenticação JWT, SQLite, CRUD com filtros e documentação Swagger.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/ProductManagementAPI" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 6 - Linux Environment -->
                 <div class="project-card" data-reveal data-reveal-delay="350">
                     <span class="project-tag">Linux</span>
                     <h3>Linux Environment</h3>
                     <div class="project-lang"><span class="dot" style="background:#f1e05a;"></span> Shell &bull; Bash &bull; Config</div>
-                    <p>Dotfiles e ambiente Linux profissional: bashrc com aliases inteligentes, PS1 customizado, scripts de setup automatizado, instalador de ferramentas de pentest e configuração completa.</p>
+                    <p>Dotfiles e ambiente Linux: bashrc com aliases, scripts de setup e instalador de pentest tools.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/linux-environment" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 7 - CTF Writeups -->
                 <div class="project-card" data-reveal data-reveal-delay="400">
                     <span class="project-tag">Security</span>
                     <h3>CTF Writeups</h3>
                     <div class="project-lang"><span class="dot" style="background:#00ff88;"></span> Python &bull; Reverse &bull; Crypto</div>
-                    <p>Repositório de writeups de desafios Capture The Flag organizados por categoria (Web, Crypto, Reversing, Forensics, OSINT, PWN). Inclui scripts de decode e reverse engineering.</p>
+                    <p>Writeups de CTF organizados por categoria. Scripts de decode, reverse e recursos de estudo.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/ctf-writeups" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 8 - Keylogger Educacional -->
                 <div class="project-card" data-reveal data-reveal-delay="450">
                     <span class="project-tag">Python</span>
                     <h3>Keylogger Educacional</h3>
                     <div class="project-lang"><span class="dot" style="background:#3572A5;"></span> Python &bull; pynput &bull; Ethical</div>
-                    <p>Projeto educacional sobre segurança digital. Keylogger com logging, análise de padrões de digitação, e ferramenta de detecção de ameaças. <strong>Aviso ético:</strong> uso exclusivo para aprendizado.</p>
+                    <p>Projeto educacional sobre segurança digital. Aviso ético: uso exclusivo para aprendizado.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/keylogger-educacional" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 9 - Trilha .NET Fundamentos -->
                 <div class="project-card" data-reveal data-reveal-delay="500">
                     <span class="project-tag">C#</span>
                     <h3>Estudos .NET — Fundamentos</h3>
                     <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
-                    <p>Desafio prático de fundamentos .NET: classes, métodos, encapsulamento, herança e manipulação de dados com C#.</p>
+                    <p>Desafio prático de fundamentos .NET: classes, métodos, encapsulamento, herança.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/trilha-net-fundamentos-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 10 - Trilha .NET POO -->
                 <div class="project-card" data-reveal data-reveal-delay="550">
                     <span class="project-tag">C#</span>
                     <h3>Estudos .NET — POO</h3>
                     <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
-                    <p>Desafio de Programação Orientada a Objetos com .NET: abstração, interfaces, polimorfismo e boas práticas.</p>
+                    <p>Desafio de POO com .NET: abstração, interfaces, polimorfismo e boas práticas.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/trilha-net-poo-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
                 </div>
 
-                <!-- 11 - Trilha .NET Explorando -->
                 <div class="project-card" data-reveal data-reveal-delay="600">
                     <span class="project-tag">C#</span>
                     <h3>Estudos .NET — Explorando</h3>
                     <div class="project-lang"><span class="dot" style="background:#178600;"></span> C# &bull; .NET</div>
-                    <p>Desafio de APIs e bibliotecas .NET: consumo de dados, serialização e manipulação de arquivos.</p>
+                    <p>Desafio de APIs e bibliotecas .NET: consumo de dados, serialização e arquivos.</p>
                     <div class="project-links">
                         <a href="https://github.com/Raphaellopes-dev/trilha-net-explorando-desafio" target="_blank" rel="noopener" class="btn btn-outline btn-small"><i class="fab fa-github"></i> Repositório</a>
                     </div>
@@ -249,62 +226,62 @@
                 <div class="skill-card" data-reveal data-reveal-delay="50">
                     <div class="skill-icon"><i class="fab fa-python"></i></div>
                     <h3>Python</h3>
-                    <p>Ferramentas, scripts, automação, Pygame, scanners</p>
+                    <p>Ferramentas, scripts, automação, Pygame</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="100">
                     <div class="skill-icon"><i class="fab fa-php"></i></div>
                     <h3>PHP</h3>
-                    <p>Sistemas web, MySQL, autenticação, dashboards</p>
+                    <p>Sistemas web, MySQL, autenticação</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="150">
                     <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
                     <h3>C# / .NET</h3>
-                    <p>APIs REST, JWT, ORM, POO, desafios DIO</p>
+                    <p>APIs REST, JWT, ORM, POO</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="200">
                     <div class="skill-icon"><i class="fab fa-js"></i></div>
                     <h3>JavaScript</h3>
-                    <p>DOM, APIs, React, async, manipulação</p>
+                    <p>DOM, APIs, React, async</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="250">
                     <div class="skill-icon"><i class="fab fa-react"></i></div>
                     <h3>React</h3>
-                    <p>Componentes, hooks, interfaces modernas</p>
+                    <p>Componentes, hooks, interfaces</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="300">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>SQL</h3>
-                    <p>MySQL, SQLite, modelagem, consultas</p>
+                    <p>MySQL, SQLite, modelagem</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="350">
                     <div class="skill-icon"><i class="fab fa-linux"></i></div>
                     <h3>Linux</h3>
-                    <p>Arch, Ubuntu, Bash, scripts, automação</p>
+                    <p>Arch, Ubuntu, Bash, scripts</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="400">
                     <div class="skill-icon"><i class="fas fa-shield-halved"></i></div>
                     <h3>Pentest</h3>
-                    <p>nmap, sqlmap, hydra, nikto, gobuster</p>
+                    <p>nmap, sqlmap, hydra, nikto</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="450">
                     <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
                     <h3>Redes</h3>
-                    <p>TCP/IP, DNS, HTTP, sockets, banner grabbing</p>
+                    <p>TCP/IP, DNS, HTTP, sockets</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="500">
                     <div class="skill-icon"><i class="fas fa-terminal"></i></div>
                     <h3>Git</h3>
-                    <p>Versionamento, GitHub, branches, workflow</p>
+                    <p>Versionamento, GitHub, workflow</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="550">
                     <div class="skill-icon"><i class="fas fa-lock"></i></div>
                     <h3>Segurança Web</h3>
-                    <p>XSS, SQLi, headers, SSL/TLS, CSP, HSTS</p>
+                    <p>XSS, SQLi, headers, SSL/TLS</p>
                 </div>
                 <div class="skill-card" data-reveal data-reveal-delay="600">
                     <div class="skill-icon"><i class="fas fa-microchip"></i></div>
                     <h3>APIs REST</h3>
-                    <p>.NET, JWT, Swagger, JSON, integrações</p>
+                    <p>.NET, JWT, Swagger, JSON</p>
                 </div>
             </div>
         </div>
@@ -396,59 +373,36 @@
     <script>
     /* PARTICLES */
     (function() {
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        let w, h, particles;
-        const COUNT = 60;
+        const canvas = document.getElementById('particles-canvas'), ctx = canvas.getContext('2d');
+        let w, h, particles; const COUNT = 50;
         function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
         window.addEventListener('resize', resize); resize();
-        class Particle {
-            constructor() { this.reset(); }
-            reset() { this.x = Math.random() * w; this.y = Math.random() * h; this.size = Math.random() * 2 + 0.5; this.speedX = (Math.random() - 0.5) * 0.4; this.speedY = (Math.random() - 0.5) * 0.4; this.alpha = Math.random() * 0.4 + 0.1; }
-            update() { this.x += this.speedX; this.y += this.speedY; if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset(); }
-            draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = `rgba(0, 255, 136, ${this.alpha})`; ctx.fill(); }
-        }
-        particles = Array.from({ length: COUNT }, () => new Particle());
-        function drawConnections() {
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 130) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.strokeStyle = `rgba(0, 255, 136, ${0.035 * (1 - dist / 130)})`; ctx.lineWidth = 0.5; ctx.stroke(); }
-                }
-            }
-        }
-        function animate() { ctx.clearRect(0, 0, w, h); particles.forEach(p => { p.update(); p.draw(); }); drawConnections(); requestAnimationFrame(animate); }
+        class P { constructor() { this.reset(); } reset() { this.x = Math.random()*w; this.y = Math.random()*h; this.s = Math.random()*2+0.5; this.vx = (Math.random()-0.5)*0.3; this.vy = (Math.random()-0.5)*0.3; this.a = Math.random()*0.3+0.1; } update() { this.x+=this.vx; this.y+=this.vy; if(this.x<0||this.x>w||this.y<0||this.y>h) this.reset(); } draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.s,0,Math.PI*2); ctx.fillStyle=`rgba(0,255,136,${this.a})`; ctx.fill(); } }
+        particles = Array.from({length:COUNT},()=>new P());
+        function connect() { for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++) { const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy); if(d<120) { ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(0,255,136,${0.03*(1-d/120)})`; ctx.lineWidth=0.5; ctx.stroke(); } } }
+        function animate() { ctx.clearRect(0,0,w,h); particles.forEach(p=>{p.update();p.draw()}); connect(); requestAnimationFrame(animate); }
         animate();
     })();
 
-    /* TYPEWRITER */
+    /* TYPEWRITER on terminal cursor line */
     (function() {
-        const el = document.getElementById('typeText');
+        const cursor = document.getElementById('heroCursor');
         const texts = [
-            'Dev FullStack & Pentest — Python, PHP, C#, JS, React',
-            'Código seguro começa com mentalidade de segurança',
-            'Linux > Windows — e isso nao e opiniao',
-            'Construindo ferramentas, explorando sistemas',
-            'nmap -sV -sC target.com // conhecimento e poder'
+            'nmap -sV -sC target.com',
+            'python3 scanner.py --full',
+            'hydra -l root -P wordlist.txt ssh://target',
+            'gobuster dir -u https://target.com -w wordlist.txt',
+            'sqlmap -u "https://target.com/page?id=1"'
         ];
         let idx = 0, charIdx = 0, isDeleting = false;
-        const speed = 55, deleteSpeed = 28, pause = 2000;
+        const speed = 50, deleteSpeed = 25, pause = 2000;
         function tick() {
             const current = texts[idx];
-            if (!isDeleting) { charIdx++; el.textContent = current.slice(0, charIdx); if (charIdx === current.length) { isDeleting = true; setTimeout(tick, pause); return; } setTimeout(tick, speed); }
-            else { charIdx--; el.textContent = current.slice(0, charIdx); if (charIdx === 0) { isDeleting = false; idx = (idx + 1) % texts.length; setTimeout(tick, 300); return; } setTimeout(tick, deleteSpeed); }
+            if (!isDeleting) { charIdx++; cursor.textContent = current.slice(0,charIdx) + '_'; if (charIdx === current.length) { isDeleting = true; setTimeout(tick, pause); return; } setTimeout(tick, speed); }
+            else { charIdx--; cursor.textContent = (charIdx > 0 ? current.slice(0,charIdx) : '') + '_'; if (charIdx === 0) { isDeleting = false; idx = (idx + 1) % texts.length; setTimeout(tick, 300); return; } setTimeout(tick, deleteSpeed); }
         }
         tick();
     })();
-
-    /* MOUSE GLOW */
-    document.querySelectorAll('.skill-card, .project-card, .highlight-item, .philosophy-block').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width * 100) + '%');
-            card.style.setProperty('--my', ((e.clientY - rect.top) / rect.height * 100) + '%');
-        });
-    });
 
     /* SCROLL PROGRESS */
     const progressBar = document.getElementById('scroll-progress');
@@ -470,10 +424,8 @@
 
     /* GITHUB LIVE STATS */
     (function() {
-        const repoCount = document.getElementById('ghRepos'), publicRepos = document.getElementById('ghPublicRepos');
-        if (repoCount && publicRepos) {
-            fetch('https://api.github.com/users/Raphaellopes-dev').then(r => r.json()).then(data => { if (data.public_repos !== undefined) { repoCount.textContent = data.public_repos; publicRepos.textContent = data.public_repos; } }).catch(() => {});
-        }
+        const rc = document.getElementById('ghRepos'), pr = document.getElementById('ghPublicRepos');
+        if (rc && pr) { fetch('https://api.github.com/users/Raphaellopes-dev').then(r=>r.json()).then(d=>{ if(d.public_repos!==undefined) { rc.textContent=d.public_repos; pr.textContent=d.public_repos; } }).catch(()=>{}); }
     })();
     </script>
 

@@ -107,9 +107,10 @@ body {
 .nav-logo {
     font-size: 22px;
     font-weight: 900;
-    color: #fff;
+    color: var(--emerald);
     text-decoration: none;
     letter-spacing: -0.5px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
 }
 
 .nav-links {
@@ -196,135 +197,126 @@ body {
     z-index: 2;
 }
 
-.hero-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 6px 16px;
-    border-radius: 100px;
-    border: 1px solid rgba(0, 255, 136, 0.15);
+/* ── TERMINAL ── */
+.terminal {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 136, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 0 60px rgba(0, 255, 136, 0.04), 0 20px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
+}
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.06);
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: inherit;
+}
+
+.terminal-body {
+    padding: 24px 28px;
+}
+
+.terminal-line {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: pre-wrap;
+    font-family: inherit;
+}
+
+.terminal-line-empty {
+    height: 8px;
+}
+
+.terminal-line .prompt {
     color: var(--emerald);
-    background: rgba(0, 255, 136, 0.04);
-    margin-bottom: 2rem;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 8vw, 100px);
-    font-weight: 900;
-    line-height: 1.0;
-    margin-bottom: 8px;
-    color: #fff;
-    letter-spacing: -2px;
-}
-
-.hero h1 .highlight {
-    background: linear-gradient(135deg, var(--emerald), var(--emerald-dark), #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero .typewriter {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    min-height: 2.2em;
+    opacity: 0.6;
     font-weight: 300;
-    margin-bottom: 2.5rem;
-    font-family: 'Courier New', monospace;
 }
 
-.hero .typewriter .cursor {
+.terminal-line .host {
+    color: var(--emerald);
+    font-weight: 700;
+}
+
+.terminal-line .sep {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.terminal-line .path {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.terminal-line .amp {
+    color: var(--emerald);
+    opacity: 0.6;
+}
+
+.terminal-line .val {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cursor-line {
+    color: var(--emerald);
+    font-weight: 600;
+}
+
+.terminal-cursor {
     display: inline-block;
-    width: 2px;
-    height: 1.2em;
-    background: var(--emerald);
-    margin-left: 4px;
-    animation: blink 1s step-end infinite;
-    vertical-align: text-bottom;
-    box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+    animation: terminalBlink 1s step-end infinite;
+    color: var(--emerald);
+    font-weight: 700;
 }
 
-@keyframes blink {
+@keyframes terminalBlink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
 
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
+/* Responsive terminal */
+@media (max-width: 768px) {
+    .terminal-body { padding: 16px 18px; }
+    .terminal-line { font-size: 12px; line-height: 1.6; }
+    .terminal { max-width: 92%; }
 }
 
-.hero-stat {
-    text-align: center;
+@media (max-width: 480px) {
+    .terminal-line { font-size: 10px; }
+    .terminal-body { padding: 12px 14px; }
+    .terminal-title { font-size: 10px; }
 }
 
-.hero-stat-num {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--emerald);
-    line-height: 1;
-}
 
-.hero-stat-label {
-    font-size: 11px;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 4px;
-}
-
-.hero-stat-divider {
-    width: 1px;
-    background: var(--border-subtle);
-}
 
 /* ── HERO GLOW ORB ── */
-.hero-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    position: relative;
-}
 
-.hero-logo-container::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 255, 136, 0.04) 0%, transparent 60%);
-    animation: logoGlowPulse 3s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes logoGlowPulse {
-    0%, 100% { transform: scale(1); opacity: 0.6; }
-    50% { transform: scale(1.2); opacity: 1; }
-}
-
-.hero-logo-main {
-    width: 200px;
-    height: auto;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(0 0 40px rgba(0, 255, 136, 0.15));
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.hero-logo-main:hover {
-    transform: scale(1.08);
-    filter: drop-shadow(0 0 60px rgba(0, 255, 136, 0.3));
-}
-
-.hero-actions {
-    margin-bottom: 2rem;
-}
 
 .hero-glow {
     position: absolute;
@@ -865,8 +857,6 @@ footer .heart {
     .nav-links.open { display: flex; }
     .nav-toggle { display: block; }
     .hero { min-height: auto; padding: 120px 20px 60px; }
-    .hero-stats { gap: 24px; }
-    .hero-stat-divider { display: none; }
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
     .about-highlights { grid-template-columns: 1fr 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
@@ -879,8 +869,6 @@ footer .heart {
 @media (max-width: 480px) {
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .about-highlights { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 32px; }
-    .hero-badge { font-size: 9px; }
     .container { width: 92%; }
     .btn { padding: 12px 24px; font-size: 11px; }
 }

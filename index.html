@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Lopes — Dev & Security</title>
     <meta name="description" content="Portfolio de Raphael Lopes — Dev FullStack, Pentest & Linux.">
+    <meta property="og:title" content="Raphael Lopes — Dev & Security">
+    <meta property="og:description" content="Dev FullStack & entusiasta de segurança ofensiva. Python, PHP, C#, Pentest, Linux.">
+    <meta property="og:image" content="https://raphaellopes-dev.github.io/img/logo.svg">
+    <meta property="og:url" content="https://raphaellopes-dev.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raphael Lopes — Dev & Security">
+    <meta name="twitter:description" content="Dev FullStack & entusiasta de segurança ofensiva.">
     <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="alternate icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -346,7 +354,7 @@
                 <p class="section-sub">Tem um projeto, quer discutir segurança ou só bater um papo?</p>
             </div>
             <div class="contact-wrapper" data-reveal data-reveal-delay="100">
-                <form class="contact-form" action="https://formspree.io/f/mvgbnebv" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/xyzrpbjg" method="POST">
                     <input type="text" name="name" placeholder="Seu nome" required>
                     <input type="email" name="email" placeholder="Seu e-mail" required>
                     <input type="text" name="subject" placeholder="Assunto">
@@ -354,10 +362,10 @@
                     <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar</button>
                 </form>
                 <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/raphaellopes" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/raphael-lopes-4236a226a/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                     <a href="https://github.com/Raphaellopes-dev" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="mailto:raphael.lopes.dev@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://wa.me/555199999999" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="mailto:rapha1.dev@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://wa.me/5534991975069" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -425,7 +433,9 @@
     /* GITHUB LIVE STATS */
     (function() {
         const rc = document.getElementById('ghRepos'), pr = document.getElementById('ghPublicRepos');
-        if (rc && pr) { fetch('https://api.github.com/users/Raphaellopes-dev').then(r=>r.json()).then(d=>{ if(d.public_repos!==undefined) { rc.textContent=d.public_repos; pr.textContent=d.public_repos; } }).catch(()=>{}); }
+        if (rc) rc.textContent = '...';
+        if (pr) pr.textContent = '...';
+        if (rc && pr) { fetch('https://api.github.com/users/Raphaellopes-dev').then(r=>r.json()).then(d=>{ if(d.public_repos!==undefined) { rc.textContent=d.public_repos; pr.textContent=d.public_repos; } }).catch(()=>{ rc.textContent='11'; pr.textContent='11'; }); }
     })();
     </script>
 

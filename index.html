@@ -3,252 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Raphael Lopes</title>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Raphael Lopes — Dev FullStack</title>
+    <meta name="description" content="Portfolio de Raphael Lopes — Desenvolvedor FullStack especializado em Python, .NET, C#, React, Java e JavaScript.">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav class="nav-bar" id="navBar">
+        <a href="#" class="nav-logo">&lt;<span>R</span>/&gt;</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" data-nav>Sobre</a></li>
+            <li><a href="#skills" data-nav>Skills</a></li>
+            <li><a href="#projects" data-nav>Projetos</a></li>
+            <li><a href="#philosophy" data-nav>Filosofia</a></li>
+            <li><a href="#contact" data-nav>Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content" data-reveal>
+            <img src="img/logo.svg" alt="Raphael Lopes" class="hero-logo" id="heroLogo">
+            <h1>Raphael Lopes</h1>
+            <div class="typewriter" id="typewriter"><span id="typeText"></span><span class="cursor"></span></div>
+            <div>
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> Ver Projetos</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
         <div class="container">
-            <!-- LOGO IMAGEM -->
-            <img src="img/logo.png" alt="Logo Raphael Lopes" class="logo-img" data-aos="fade-up">
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="400">
-                Dev FullStack, criador de softwares | Sistemas Web, Aplicações e Scripts para Jogos
-            </p>
-            <div class="header-buttons" data-aos="fade-up" data-aos-delay="600">
-                <a href="#projetos" class="btn">Meus Projetos</a>
-                <a href="#contato" class="btn outline">Vamos Conversar?</a>
+            <h2 class="section-title" data-reveal>Sobre Mim</h2>
+            <p class="section-sub" data-reveal data-reveal-delay="100">FullStack Developer &bull; Brasil</p>
+            <div class="about-grid">
+                <div class="about-text" data-reveal data-reveal-delay="200">
+                    <p>Olá! Sou <strong>Raphael Lopes</strong>, desenvolvedor <strong>FullStack</strong> apaixonado por tecnologia e inovação. Trabalho com <strong>Python, .NET, C#, React, Java e JavaScript</strong>, criando soluções inteligentes que unem performance, design e experiência do usuário.</p>
+                    <p>Minha jornada na tecnologia começou com a curiosidade de entender como as coisas funcionam — e hoje transformo essa curiosidade em produtos digitais que fazem a diferença. Acredito que código bem escrito é poesia em movimento.</p>
+                    <p>Atualmente focado em <strong>inteligência artificial, automação e sistemas web escaláveis</strong>, estou sempre explorando novas fronteiras da computação.</p>
+                </div>
+                <div class="about-stats" data-reveal data-reveal-delay="300">
+                    <div class="stat-card"><div class="stat-number">6+</div><div class="stat-label">Projetos Entregues</div></div>
+                    <div class="stat-card"><div class="stat-number">6</div><div class="stat-label">Tecnologias Domínio</div></div>
+                    <div class="stat-card"><div class="stat-number">Full</div><div class="stat-label">Stack Completo</div></div>
+                    <div class="stat-card"><div class="stat-number">∞</div><div class="stat-label">Café Consumido</div></div>
+                </div>
             </div>
-        </div>
-    </header>
-
-    <section id="sobre" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Sobre Raphael Lopes</h2>
-            <p>
-                Sou Raphael Lopes, Desenvolvedor FullStack e <strong>criador de softwares sob medida</strong>.
-                Transformo ideias em <strong>soluções completas</strong> — desde o conceito até o deploy.
-                Desenvolvo <strong>sistemas web, desktop, aplicações personalizadas e scripts para jogos</strong> usando <strong>Python, .NET, C#, React, Java e JavaScript</strong>.
-            </p>
-            <p>
-                Minha trajetória combina suporte técnico, automação de processos e <strong>construção de softwares escaláveis</strong>.
-                Além de sistemas corporativos, também crio <strong>scripts de IA, lógicas de jogo e mecânicas interativas</strong> — unindo tecnologia e criatividade.
-                Entrego produtos que não só funcionam — <strong>simplificam, automatizam e geram resultado real</strong>.
-            </p>
         </div>
     </section>
 
-    <section id="habilidades" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Habilidades Técnicas</h2>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Skills</h2>
+            <p class="section-sub" data-reveal data-reveal-delay="100">Tecnologias que domino e aplico no dia a dia</p>
             <div class="skills-grid">
-                <!-- Backend -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-server icon-large"></i>
-                    <h3>Backend</h3>
-                    <p>.NET Core, Python (Flask/Django)</p>
+                <div class="skill-card" data-reveal data-reveal-delay="100">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <p>Desenvolvimento backend, automação, análise de dados e scripts inteligentes.</p>
                 </div>
-                <!-- Frontend -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-laptop-code icon-large"></i>
-                    <h3>Frontend</h3>
-                    <p>React, HTML5, CSS3, JavaScript</p>
+                <div class="skill-card" data-reveal data-reveal-delay="200">
+                    <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                    <h3>C# / .NET</h3>
+                    <p>Aplicações empresariais robustas com .NET, ASP.NET Core e Entity Framework.</p>
                 </div>
-                <!-- DevOps -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-docker icon-large"></i>
-                    <h3>DevOps</h3>
-                    <p>Docker, Git/GitHub, CI/CD</p>
+                <div class="skill-card" data-reveal data-reveal-delay="300">
+                    <div class="skill-icon"><i class="fab fa-react"></i></div>
+                    <h3>React</h3>
+                    <p>Interfaces modernas e reativas com React, Hooks, Next.js e ecossistema frontend.</p>
                 </div>
-                <!-- Arquitetura de Software -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-diagram-project icon-large"></i>
-                    <h3>Arquitetura de Software</h3>
-                    <p>MVC, Clean Architecture, Microservices</p>
+                <div class="skill-card" data-reveal data-reveal-delay="400">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <p>Vanilla JS, manipulação DOM, async/await, consumo de APIs e muito mais.</p>
                 </div>
-                <!-- UX & Design de Produto -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                    <i class="fas fa-paint-brush icon-large"></i>
-                    <h3>UX & Design de Produto</h3>
-                    <p>Figma, Wireframing, Prototipagem</p>
+                <div class="skill-card" data-reveal data-reveal-delay="500">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3>TypeScript</h3>
+                    <p>Código escalável com tipagem forte, interfaces e generics no ecossistema TS.</p>
                 </div>
-                <!-- Java & Game Scripting -->
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
-                    <i class="fab fa-java icon-large"></i>
-                    <h3>Java & Game Scripting</h3>
-                    <p>Java, JavaScript, Lógica de Jogos, Game Mechanics</p>
+                <div class="skill-card" data-reveal data-reveal-delay="600">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <h3>Java</h3>
+                    <p>Sistemas corporativos com Spring Boot, JPA, microsserviços e APIs REST.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projetos" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Projetos em Destaque</h2>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Projetos</h2>
+            <p class="section-sub" data-reveal data-reveal-delay="100">Soluções reais que transformam ideias em impacto</p>
             <div class="projects-grid">
-                <!-- Projeto Web 1 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Sistema de Gestão Comercial</h3>
-                    <p>Aplicação fullstack com .NET + React + SQL Server.</p>
-                    <button class="btn small" onclick="openProject('projeto1')">Ver detalhes →</button>
+
+                <!-- 1 -->
+                <div class="project-card" data-reveal data-reveal-delay="100" onclick="openModal('modal1')">
+                    <span class="project-tag">Smart City</span>
+                    <h3>Smart City — Análise de Dados Urbanos</h3>
+                    <p>Plataforma inteligente para análise de dados urbanos com visualizações interativas e relatórios automatizados.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
 
-                <!-- Projeto Web 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3>API de Automação de Processos</h3>
-                    <p>Desenvolvida em Python (Flask) para integração entre sistemas.</p>
-                    <button class="btn small" onclick="openProject('projeto2')">Ver detalhes →</button>
+                <!-- 2 -->
+                <div class="project-card" data-reveal data-reveal-delay="200" onclick="openModal('modal2')">
+                    <span class="project-tag">Finanças</span>
+                    <h3>Stock Analysis — Análise de Ações</h3>
+                    <p>Sistema de análise de ações com dados em tempo real, indicadores técnicos e previsões baseadas em IA.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
 
-                <!-- Projeto Web 3 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Dashboard de Monitoramento</h3>
-                    <p>Frontend em React com gráficos dinâmicos e consumo de API.</p>
-                    <button class="btn small" onclick="openProject('projeto3')">Ver detalhes →</button>
+                <!-- 3 -->
+                <div class="project-card" data-reveal data-reveal-delay="300" onclick="openModal('modal3')">
+                    <span class="project-tag">IA</span>
+                    <h3>ChatBot Inteligente</h3>
+                    <p>Assistente virtual com processamento de linguagem natural, capaz de manter conversas contextuais e executar tarefas.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
 
-                <!-- Software 1 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <h3>ERP Educacional</h3>
-                    <p>Software de gestão escolar com módulos financeiro, acadêmico e RH.</p>
-                    <button class="btn small" onclick="openProject('projeto4')">Ver detalhes →</button>
+                <!-- 4 -->
+                <div class="project-card" data-reveal data-reveal-delay="400" onclick="openModal('modal4')">
+                    <span class="project-tag">Social</span>
+                    <h3>IA Recomeço — Apoio a Enchentes</h3>
+                    <p>Plataforma de apoio às vítimas de enchentes no Rio Grande do Sul com cadastro de afetados e doações.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
 
-                <!-- Software 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <h3>Controle de Estoque Industrial</h3>
-                    <p>Sistema desktop + web para fábricas, com leitor de código de barras.</p>
-                    <button class="btn small" onclick="openProject('projeto5')">Ver detalhes →</button>
+                <!-- 5 -->
+                <div class="project-card" data-reveal data-reveal-delay="500" onclick="openModal('modal5')">
+                    <span class="project-tag">Crypto</span>
+                    <h3>Cripto IA — Análise de Criptomoedas</h3>
+                    <p>Ferramenta de análise de criptomoedas com machine learning para predição de tendências de mercado.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
 
-                <!-- Projeto Game Scripting -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                    <h3>Script de IA para Jogo de Estratégia</h3>
-                    <p>Desenvolvido em Java e JavaScript para comportamento de NPCs.</p>
-                    <button class="btn small" onclick="openProject('projeto7')">Ver detalhes →</button>
+                <!-- 6 -->
+                <div class="project-card" data-reveal data-reveal-delay="600" onclick="openModal('modal6')">
+                    <span class="project-tag">Blog</span>
+                    <h3>Blog IA — Automação de Conteúdo</h3>
+                    <p>Blog automatizado com geração de conteúdo usando inteligência artificial e estratégias de SEO.</p>
+                    <button class="btn btn-primary btn-small"><i class="fas fa-expand"></i> Detalhes</button>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Modal de Detalhes do Projeto -->
-    <div id="modal" class="modal">
+    <!-- MODALS -->
+    <!-- Modal 1 -->
+    <div class="modal" id="modal1">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="modal-body">
-                <!-- Conteúdo injetado via JS -->
-            </div>
+            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
+            <h2>Smart City — Análise de Dados Urbanos</h2>
+            <p><strong>Stack:</strong> Python, Pandas, Streamlit, PostgreSQL, Machine Learning</p>
+            <p>Plataforma inteligente voltada para a análise de dados urbanos. A ferramenta consome dados abertos de cidades brasileiras e gera visualizações interativas sobre mobilidade, segurança, educação e saúde.</p>
+            <p><strong>Funcionalidades:</strong> Dashboards dinâmicos, relatórios automatizados em PDF, mapa de calor interativo, predição de indicadores com ML, e exportação de dados. A plataforma auxilia gestores públicos na tomada de decisões baseada em dados.</p>
+            <p><strong>Resultado:</strong> Redução de 40% no tempo de análise de indicadores urbanos.</p>
         </div>
     </div>
 
-    <section id="filosofia" class="section">
-        <div class="container" data-aos="fade-up">
-            <div class="philosophy-statement">
-                “Tecnologia deve simplificar processos, melhorar resultados e tornar a vida das pessoas mais fácil.”
+    <!-- Modal 2 -->
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
+            <h2>Stock Analysis — Análise de Ações</h2>
+            <p><strong>Stack:</strong> Python, yfinance, Streamlit, Plotly, TensorFlow</p>
+            <p>Sistema completo de análise de ações que consome dados em tempo real da bolsa de valores. Utiliza algoritmos de machine learning para prever tendências de curto e médio prazo.</p>
+            <p><strong>Funcionalidades:</strong> Gráficos interativos de candlestick, indicadores técnicos (RSI, MACD, médias móveis), previsão de preços com LSTM, backtesting de estratégias, e carteira de investimentos personalizada.</p>
+            <p><strong>Destaque:</strong> Precisão de 72% nas previsões de tendência semanal.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')">&times;</button>
+            <h2>ChatBot Inteligente</h2>
+            <p><strong>Stack:</strong> Python, LangChain, OpenAI API, FastAPI, React, MongoDB</p>
+            <p>Assistente virtual avançado com processamento de linguagem natural usando modelos de linguagem de última geração. Capaz de manter conversas contextuais e executar tarefas complexas.</p>
+            <p><strong>Funcionalidades:</strong> Memória de conversa, integração com APIs externas, execução de comandos, suporte a múltiplos idiomas, e dashboard de analytics de conversas.</p>
+            <p><strong>Diferencial:</strong> Taxa de resolução de 85% sem intervenção humana.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal4')">&times;</button>
+            <h2>IA Recomeço — Apoio a Enchentes</h2>
+            <p><strong>Stack:</strong> Python, Django, React, PostgreSQL, Google Maps API</p>
+            <p>Plataforma solidária desenvolvida para apoiar as vítimas das enchentes no Rio Grande do Sul. Conecta pessoas afetadas a doadores e voluntários de forma eficiente e transparente.</p>
+            <p><strong>Funcionalidades:</strong> Cadastro de afetados, mapeamento de pontos de doação, sistema de matching entre doadores e necessitados, dashboard de transparência, e chat integrado.</p>
+            <p><strong>Impacto:</strong> Mais de 200 famílias atendidas nos primeiros 30 dias.</p>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal5')">&times;</button>
+            <h2>Cripto IA — Análise de Criptomoedas</h2>
+            <p><strong>Stack:</strong> Python, Binance API, scikit-learn, Streamlit, PostgreSQL</p>
+            <p>Ferramenta avançada de análise de criptomoedas que utiliza machine learning para identificar padrões e prever movimentos do mercado.</p>
+            <p><strong>Funcionalidades:</strong> Análise em tempo real de 50+ criptomoedas, indicadores personalizados, alertas inteligentes, simulação de portfólio, e relatórios semanais de performance.</p>
+            <p><strong>Performance:</strong> Rentabilidade 15% acima do buy-and-hold em testes.</p>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal6')">&times;</button>
+            <h2>Blog IA — Automação de Conteúdo</h2>
+            <p><strong>Stack:</strong> Python, GPT API, WordPress API, SEMRush, Next.js</p>
+            <p>Blog automatizado que utiliza inteligência artificial para gerar, otimizar e publicar conteúdo relevante sobre tecnologia e inovação.</p>
+            <p><strong>Funcionalidades:</strong> Geração automática de artigos, SEO inteligente, agendamento de posts, análise de palavras-chave, e dashboard de métricas de engajamento.</p>
+            <p><strong>Resultado:</strong> Crescimento de 300% no tráfego orgânico em 3 meses.</p>
+        </div>
+    </div>
+
+    <!-- PHILOSOPHY -->
+    <section class="section" id="philosophy">
+        <div class="container">
+            <div class="philosophy-block" data-reveal>
+                <div class="philosophy-text">A tecnologia não é apenas ferramenta — é a ponte entre o impossível e o realizado. Cada linha de código é um passo em direção ao futuro que imaginamos.</div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Entre em Contato</h2>
-            <p>Estou aberto a networking, colaborações, freelas e parcerias que façam diferença.</p>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Contato</h2>
+            <p class="section-sub" data-reveal data-reveal-delay="100">Vamos transformar sua ideia em código?</p>
+            <div class="contact-wrapper" data-reveal data-reveal-delay="200">
+                <form class="contact-form" action="https://formspree.io/f/mvgbnebv" method="POST">
+                    <input type="text" name="name" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <input type="text" name="subject" placeholder="Assunto">
+                    <textarea name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                </form>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/raphaellopes" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://github.com/Raphaellopes-dev" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:raphael.lopes.dev@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://wa.me/555199999999" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Formulário Formspree -->
-            <form action="https://formspree.io/f/mvgbnebv" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-
-<div class="contact-links">
-    <a href="mailto:Rapha1.dev@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-    <a href="https://www.linkedin.com/in/raphael-lopes-4236a226a/" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://github.com/Raphaellopes-dev" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
-</div>
-
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>© 2025 Raphael Lopes. Feito com ☕ em Python, .NET, Java & React.</p>
+            <p>&copy; 2026 Raphael Lopes &mdash; Dev FullStack. Feito com <i class="fas fa-heart" style="color: #667eea;"></i> e código.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- SCRIPTS -->
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+    /* ═══════════════════════════════════════════════
+       PARTICLES — Canvas Quantum System
+       ═══════════════════════════════════════════════ */
+    (function() {
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let w, h, particles;
+        const COUNT = 80;
 
-        function openProject(id) {
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modal-body');
-
-            const projects = {
-                projeto1: `
-                    <h2>Sistema de Gestão Comercial</h2>
-                    <p><strong>Tecnologias:</strong> .NET Core, React, SQL Server, JWT, Docker</p>
-                    <p><strong>Descrição:</strong> Sistema completo de gestão para pequenas e médias empresas, com módulos de vendas, estoque, financeiro e relatórios gerenciais. API REST segura com autenticação por token. Containerizado com Docker para fácil deploy.</p>
-                    <p><strong>Desafios:</strong> Integração em tempo real entre frontend e backend, otimização de queries complexas, escalabilidade para +500 usuários simultâneos.</p>
-                `,
-                projeto2: `
-                    <h2>API de Automação de Processos</h2>
-                    <p><strong>Tecnologias:</strong> Python, Flask, Redis, RabbitMQ, PostgreSQL</p>
-                    <p><strong>Descrição:</strong> API desenvolvida para automatizar fluxos manuais entre sistemas legados e novas plataformas. Processa +10 mil requisições/dia, com fila de tarefas assíncronas e retry automático em caso de falha.</p>
-                    <p><strong>Resultado:</strong> Redução de 70% no tempo de processamento e eliminação de erros humanos.</p>
-                `,
-                projeto3: `
-                    <h2>Dashboard de Monitoramento</h2>
-                    <p><strong>Tecnologias:</strong> React, Chart.js, Axios, Node.js, WebSocket</p>
-                    <p><strong>Descrição:</strong> Painel administrativo em tempo real que exibe métricas de desempenho, uso de recursos e alertas. Conectado a múltiplas APIs e atualiza dados a cada 5 segundos sem refresh da página.</p>
-                    <p><strong>Diferencial:</strong> UX otimizada para tomada de decisão rápida, filtros dinâmicos e exportação de relatórios em PDF/CSV.</p>
-                `,
-                projeto4: `
-                    <h2>ERP Educacional</h2>
-                    <p><strong>Tecnologias:</strong> .NET MAUI, SQL Server, React, Azure</p>
-                    <p><strong>Descrição:</strong> Software completo para gestão de escolas e cursos. Controle de matrículas, boletos, frequência, notas e RH em um único sistema.</p>
-                    <p><strong>Destaque:</strong> Interface adaptável para diretores, professores e secretários. Relatórios gerenciais em tempo real.</p>
-                `,
-                projeto5: `
-                    <h2>Controle de Estoque Industrial</h2>
-                    <p><strong>Tecnologias:</strong> C#, WPF, MySQL, APIs REST</p>
-                    <p><strong>Descrição:</strong> Sistema híbrido (desktop + web) para fábricas e distribuidoras. Integra leitor de código de barras, alertas de reposição e dashboards de saída de produtos.</p>
-                    <p><strong>Resultado:</strong> Redução de 30% em perdas por vencimento e ruptura de estoque.</p>
-                `,
-                projeto6: `
-                    <h2>App de Atendimento Clínico</h2>
-                    <p><strong>Tecnologias:</strong> Electron.js, Node.js, PostgreSQL, JWT</p>
-                    <p><strong>Descrição:</strong> Software para clínicas médicas com prontuário digital, agendamento online, faturamento integrado e lembretes automáticos para pacientes.</p>
-                    <p><strong>Diferencial:</strong> Sincronização offline e compliance com LGPD.</p>
-                `,
-                projeto7: `
-                    <h2>Script de IA para Jogo de Estratégia</h2>
-                    <p><strong>Tecnologias:</strong> Java, JavaScript, Phaser.js, Node.js</p>
-                    <p><strong>Descrição:</strong> Desenvolvimento de scripts de IA para NPCs em jogo de estratégia. Comportamentos adaptativos, tomada de decisão baseada em estado e integração com engine de jogo via WebSockets.</p>
-                    <p><strong>Diferencial:</strong> Sistema de "personalidade" para NPCs, permitindo jogabilidade única a cada partida.</p>
-                `
-            };
-
-            modalBody.innerHTML = projects[id];
-            modal.style.display = 'flex';
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
         }
+        window.addEventListener('resize', resize);
+        resize();
 
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.6;
+                this.speedY = (Math.random() - 0.5) * 0.6;
+                this.alpha = Math.random() * 0.5 + 0.2;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(167, 139, 250, ${this.alpha})`;
+                ctx.fill();
             }
         }
+
+        particles = Array.from({ length: COUNT }, () => new Particle());
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(167, 139, 250, ${0.06 * (1 - dist / 150)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    })();
+
+    /* ═══════════════════════════════════════════════
+       TYPEWRITER
+       ═══════════════════════════════════════════════ */
+    (function() {
+        const el = document.getElementById('typeText');
+        const texts = [
+            'Dev FullStack — Python, .NET, C#, React, Java, JS',
+            'Criando soluções inteligentes',
+            'Transformando ideias em código',
+            'IA & Automação & Inovação'
+        ];
+        let idx = 0, charIdx = 0, isDeleting = false;
+        const speed = 60, deleteSpeed = 30, pause = 2000;
+
+        function tick() {
+            const current = texts[idx];
+            if (!isDeleting) {
+                charIdx++;
+                el.textContent = current.slice(0, charIdx);
+                if (charIdx === current.length) {
+                    isDeleting = true;
+                    setTimeout(tick, pause);
+                    return;
+                }
+                setTimeout(tick, speed);
+            } else {
+                charIdx--;
+                el.textContent = current.slice(0, charIdx);
+                if (charIdx === 0) {
+                    isDeleting = false;
+                    idx = (idx + 1) % texts.length;
+                    setTimeout(tick, 300);
+                    return;
+                }
+                setTimeout(tick, deleteSpeed);
+            }
+        }
+        tick();
+    })();
+
+    /* ═══════════════════════════════════════════════
+       3D TILT ON PROJECT CARDS
+       ═══════════════════════════════════════════════ */
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const angleX = ((y - cy) / cy) * -6;
+            const angleY = ((x - cx) / cx) * 6;
+            card.style.transform =
+                `translateY(-8px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    /* ═══════════════════════════════════════════════
+       MOUSE GLOW ON GLASS CARDS
+       ═══════════════════════════════════════════════ */
+    document.querySelectorAll('.glass-card, .skill-card, .project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            card.style.setProperty('--mx', x + '%');
+            card.style.setProperty('--my', y + '%');
+        });
+    });
+
+    /* ═══════════════════════════════════════════════
+       SCROLL PROGRESS
+       ═══════════════════════════════════════════════ */
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
+    });
+
+    /* ═══════════════════════════════════════════════
+       NAV SCROLL EFFECT + TOGGLE
+       ═══════════════════════════════════════════════ */
+    const navBar = document.getElementById('navBar');
+    window.addEventListener('scroll', () => {
+        navBar.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    document.getElementById('navToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    document.querySelectorAll('[data-nav]').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('open');
+        });
+    });
+
+    /* ═══════════════════════════════════════════════
+       MODALS
+       ═══════════════════════════════════════════════ */
+    function openModal(id) {
+        document.getElementById(id).style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.modal').forEach(m => {
+        m.addEventListener('click', e => {
+            if (e.target === m) { closeModal(m.id); }
+        });
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && m.style.display === 'flex') { closeModal(m.id); }
+        });
+    });
+
+    /* ═══════════════════════════════════════════════
+       REVEAL ON SCROLL — IntersectionObserver
+       ═══════════════════════════════════════════════ */
+    (function() {
+        const els = document.querySelectorAll('[data-reveal]');
+        if (!els.length) return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        els.forEach(el => observer.observe(el));
+    })();
     </script>
+
 </body>
 </html>

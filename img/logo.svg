@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="rGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8e8ff"/>
+      <stop offset="40%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#667eea"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f093fb" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#667eea" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#border)" stroke-width="3" opacity="0.8"/>
+
+  <!-- Inner ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#border)" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Orbital rings (quantum feel) -->
+  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(-30 256 256)"/>
+  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(30 256 256)"/>
+  <ellipse cx="256" cy="256" rx="200" ry="80" fill="none" stroke="url(#border)" stroke-width="0.6" opacity="0.15" transform="rotate(90 256 256)"/>
+
+  <!-- Quantum dots on orbital rings -->
+  <circle cx="456" cy="256" r="3" fill="#a78bfa" opacity="0.4"/>
+  <circle cx="56" cy="256" r="3" fill="#a78bfa" opacity="0.4"/>
+  <circle cx="329" cy="112" r="2.5" fill="#667eea" opacity="0.3"/>
+  <circle cx="183" cy="400" r="2.5" fill="#667eea" opacity="0.3"/>
+  <circle cx="354" cy="391" r="2" fill="#764ba2" opacity="0.25"/>
+  <circle cx="158" cy="121" r="2" fill="#764ba2" opacity="0.25"/>
+
+  <!-- Circuit-like decorative lines -->
+  <path d="M370 140 L400 140 L400 200" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <path d="M142 372 L112 372 L112 312" fill="none" stroke="url(#accent)" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="400" cy="200" r="2.5" fill="#a78bfa" opacity="0.4"/>
+  <circle cx="112" cy="312" r="2.5" fill="#a78bfa" opacity="0.4"/>
+
+  <!-- Main letter R -->
+  <g filter="url(#glow)">
+    <path d="
+      M 196 340
+      L 196 172
+      L 278 172
+      Q 320 172 320 210
+      Q 320 240 292 256
+      Q 320 265 334 285
+      L 340 294
+      L 316 294
+      L 290 260
+      Q 260 250 240 250
+      L 240 340
+      Z
+      M 240 230
+      L 274 230
+      Q 294 230 294 210
+      Q 294 192 274 192
+      L 240 192
+      Z
+    " fill="url(#rGrad)"/>
+  </g>
+
+  <!-- Small accent dot (like a semicolon or code element) -->
+  <g filter="url(#softGlow)">
+    <circle cx="196" cy="370" r="6" fill="#f093fb" opacity="0.8"/>
+  </g>
+
+  <!-- Subtle corner decorative brackets -->
+  <path d="M 140 140 L 160 140 L 160 160" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 372 140 L 352 140 L 352 160" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 140 372 L 160 372 L 160 352" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
+  <path d="M 372 372 L 352 372 L 352 352" fill="none" stroke="url(#border)" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#667eea" stroke-width="2" opacity="0.15" filter="url(#glow)"/>
+</svg>

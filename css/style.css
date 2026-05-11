@@ -111,13 +111,7 @@ body {
     text-decoration: none;
     letter-spacing: -0.5px;
     text-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-}
-
-.nav-prompt {
-    color: rgba(0, 255, 136, 0.35);
-    font-weight: 300;
     font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
-    margin-right: 2px;
 }
 
 .nav-links {
@@ -135,6 +129,7 @@ body {
     letter-spacing: 1.5px;
     transition: all 0.3s;
     position: relative;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
 }
 
 .nav-links a::after {

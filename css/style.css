@@ -293,6 +293,19 @@ body {
 }
 
 /* ── HERO GLOW ORB ── */
+.hero-logo-main {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.15));
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-logo-main:hover {
+    transform: scale(1.1) rotate(-3deg);
+    filter: drop-shadow(0 0 50px rgba(0, 255, 136, 0.3));
+}
+
 .hero-glow {
     position: absolute;
     width: 700px;

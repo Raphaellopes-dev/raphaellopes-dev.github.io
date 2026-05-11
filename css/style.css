@@ -293,17 +293,44 @@ body {
 }
 
 /* ── HERO GLOW ORB ── */
-.hero-logo-main {
-    width: 100px;
+.hero-logo-bg {
+    position: absolute;
+    width: 500px;
     height: auto;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.15));
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 0 80px rgba(0, 255, 136, 0.1));
+    animation: heroLogoFloat 8s ease-in-out infinite;
 }
 
-.hero-logo-main:hover {
-    transform: scale(1.1) rotate(-3deg);
-    filter: drop-shadow(0 0 50px rgba(0, 255, 136, 0.3));
+@keyframes heroLogoFloat {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.06; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.09; }
+}
+
+.hero-title {
+    font-size: clamp(56px, 10vw, 120px);
+    font-weight: 900;
+    line-height: 0.95;
+    color: #fff;
+    letter-spacing: -3px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--emerald), var(--emerald-dark), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-actions {
+    margin-bottom: 2rem;
 }
 
 .hero-glow {
